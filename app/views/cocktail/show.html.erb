@@ -1,0 +1,19 @@
+<div class="addnew">
+  <h1><%= @cocktail.name %></h1>
+
+  <h3>List of ingredients:</h2>
+  <ul>
+  <% @cocktail.doses.each do |dose| %>
+    <li><p><%= dose.ingredient.name %> (<%= dose.description %>)
+      <%= link_to destroy_path(dose.id), method: :delete, :data => {:confirm => "You Sure?"}  do %><i class="fas fa-trash"></i><% end  %></p></li>
+  <% end %>
+  </ul><br><br><br>
+
+  <h3>Add a new ingredient:</h3>
+  <%= simple_form_for @dose do |f| %>
+    <%= f.hidden_field :id, :value => @cocktail.id  %>
+    <%= f.select :ingredient, @ingredients %><br><br>
+    <%= f.input :description %>
+    <%= f.submit %>
+  <% end  %>
+</div>

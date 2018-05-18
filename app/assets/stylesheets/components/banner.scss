@@ -1,0 +1,26 @@
+.banner {
+  height: calc(100vh - 70px);
+  background-image: url("https://www.mailexperiences.co.uk/content/img/product/large/royal-cocktails-with-sharing-18100237.jpg");
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    font-size: 40px;
+    &:hover {
+      text-shadow: 2px 2px 3px rgba(255, 245, 112, 1);
+  }
+}
+  h3 {
+    font-weight: lighter;
+    &:hover {
+      text-shadow: 2px 2px 3px rgba(255, 245, 112, 1);
+    }
+  }
+  p {
+    font-size: 80px;
+    font-weight: bolder;
+  }
+}

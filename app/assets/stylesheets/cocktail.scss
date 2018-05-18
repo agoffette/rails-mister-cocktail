@@ -1,0 +1,117 @@
+// Place all the styles related to the Cocktail controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.card {
+  background: black;
+  border-radius: 5px;
+  margin: 7px 0px;
+  color: white;
+  height: 180px;
+  position: relative;
+  box-shadow: 2px 2px 2px -1px rgba(255, 245, 112, 1);
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  p {
+    padding: 10px;
+    position: absolute;
+    top: 70px;
+    font-size: 20px;
+    &:hover {
+      text-shadow: 2px 2px 3px rgba(255, 245, 112, 1);
+    }
+  }
+}
+
+.row {
+    margin: 10px;
+  }
+
+.container {
+  padding: 30px;
+  margin: 0;
+  margin-bottom: 70px;
+  width: 100%;
+
+  h1 {
+    font-size: 28px;
+    border-bottom: 8px solid black ;
+    width: 40%;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 5px;
+
+  }
+}
+
+h3 {
+  font-weight: lighter;
+  font-size: 20px;
+}
+
+
+
+////////AOS CSS:
+
+body {
+  font-family: Helvetica,Tahoma;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.aos-all {
+  width: 1000px;
+  max-width: 98%;
+  margin: 10vh auto 0 auto;
+}
+
+.aos-item {
+  display: inline-block;
+  float: left;
+  width: 33.3333%;
+  height: 300px;
+  padding: 20px;
+}
+
+.aos-item__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  float: left;
+  background: #1da4e2;
+  line-height: 260px;
+  text-align: center;
+  color: #fff;
+}
+
+@media screen and (max-width: 800px) {
+  .aos-item {
+    width: 50%;
+  }
+}
+
+.addnew {
+  margin-top: 70px;
+  padding: 20px;
+  h1 {
+    font-size: 28px;
+    border-bottom: 8px solid black ;
+    width: 40%;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 5px;
+  }
+  input {
+    width: 400px;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}

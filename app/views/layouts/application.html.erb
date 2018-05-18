@@ -1,15 +1,34 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsMisterCocktail</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+   <title>RailsMisterCocktail</title>
+   <%= csrf_meta_tags %>
+   <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+ </head>
+
 
   <body>
+    <div class="navbar">
+      <p id="logo"><i class="fas fa-glass-martini"></i><%= link_to "Shakr", cocktails_path %></p>
+    </div>
     <%= yield %>
+    <div class="footer">
+      <p><i class="fas fa-sort-up"></i>&ensp;<%= link_to "Back to top", "#" %></p>
+      <p class="btn"><i class="fas fa-plus"></i>&ensp;<%= link_to "Add a new cocktail", new_path %></p>
+      <p>Developed with <i class="fas fa-heart"></i> @<%= link_to "lewagon", "http://www.lewagon.org"  %></p>
+    </div>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script>
+    AOS.init();
+  </script>
+   <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
+  <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
   </body>
 </html>
